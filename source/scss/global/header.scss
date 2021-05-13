@@ -1,0 +1,121 @@
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $black;  
+
+  &__flex{
+    @include flex_between;
+  }
+
+  &__logo{
+    display: block;
+    width: 45px;
+    height: 34px;
+    &:hover{opacity: 0.75;}
+  }
+
+  &__menu{
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $black;
+    padding: 16px 15px 43px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(500px);
+    transition: all 0.3s;
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    &__nav{
+      flex-grow: 1;
+      &-link{
+        display: block;
+        color: $white;
+        text-align: center;
+        line-height: 28px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        padding: 14px 0;
+        &:active, &:hover{color: $green;}
+      }
+    }
+
+    &__socials{
+      display: flex;
+      justify-content: center;
+      &-link{
+        @include flex_center;
+        width: 48px;
+        height: 48px;
+        margin: 0 6px;
+        svg path{@include transition;}
+        &:active svg path{fill: $green;}
+      }
+    }
+
+    &-btn{
+      width: 56px;
+      height: 56px;
+      background-color: rgba(0,0,0,0);
+      border: none;
+      margin-right: -15px;
+      &.active{background-color: $green;}
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .header{
+    position: static;
+    background-color: rgba(0,0,0,0);
+    padding: 15px 0;
+
+    &__logo{
+      width: 81px;
+      height: 60px;
+      margin-right: 14px;
+    }
+    
+    &__menu{
+      position: static;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-grow: 1;
+      background-color: rgba(0,0,0,0);
+      padding: 0;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+  
+      &__nav{
+        flex-grow: 0;
+        &-link{
+          display: inline-block;
+          text-align: left;
+          padding: 0 24px;
+          &:hover{color: $green;}
+        }
+      }
+  
+      &__socials-link{
+          &:hover svg path{fill: $green;}
+      }
+  
+      &-btn{
+        display: none;
+      }
+    }
+  }
+}

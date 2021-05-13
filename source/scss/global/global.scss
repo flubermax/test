@@ -1,0 +1,56 @@
+// глобальные стили кроме normalize
+
+*{
+	&:focus, &:active{outline: none !important;}
+}
+
+body{
+  color: $white;
+  min-width: 320px;
+	overflow-x: hidden;
+}
+
+.page-wrapper{
+  min-height: 100vh;
+  background: no-repeat bottom center url('../img/bg.jpg');
+  background-size: cover;
+  padding: 56px 0 62px;
+}
+
+.container {
+	@include make-container();
+	@include make-container-max-widths();
+}
+
+img {
+	@include img-fluid();
+}
+
+button, a {@include transition;}
+
+a{text-decoration: none;}
+
+.simple-text{
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: 0.3px;
+	&-intro{
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+
+.hl{
+	color: $white;
+	font-weight: 400;
+}
+.mr-center{
+	margin: 0 auto;
+}
+
+@media (min-width: 992px){
+  .page-wrapper {
+		padding-top: 0;
+	}
+}
+

@@ -1,0 +1,26 @@
+.button {
+	@include font-size(18px);
+	@include flex_center;
+	font-family: $btn-font-family;
+	font-weight: 700;
+	letter-spacing: 0.25px;
+	text-transform: uppercase;
+	max-width: 192px;
+	height: 56px;
+}
+
+.btn {
+	@extend .button;
+
+	&--green {
+		color: $white;
+		background-color: $green;
+		border: 2px solid $green;
+		&:hover{
+			color: $white;
+			background-color: rgba(0,0,0,0);
+			box-shadow: 0px 0px 10px #77B900;
+		}
+	}
+}
+

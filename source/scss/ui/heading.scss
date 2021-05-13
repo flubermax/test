@@ -1,0 +1,20 @@
+.heading {
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	font-size: 26px;
+	line-height: 36px;
+	letter-spacing: 0.25px;
+	text-transform: uppercase;
+	text-align: center;	
+}
+
+.heading-h1 {
+	@extend .heading;
+	margin: 60px 0 0;
+	
+}
+.heading-h2 {
+	@extend .heading;
+	color: $green;
+	margin: 0 0 12px;
+}

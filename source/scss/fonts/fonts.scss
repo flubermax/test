@@ -1,0 +1,32 @@
+//check fonts on https://fonts.google.com/ first
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Play:wght@400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto-Regular.eot');
+	src: local('☺'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype'), url('../fonts/Roboto-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Play';
+	src: url('../fonts/Play-Regular.eot');
+	src: local('☺'), url('../fonts/Play-Regular.woff') format('woff'), url('../fonts/Play-Regular.ttf') format('truetype'), url('../fonts/Play-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Play';
+	src: url('../fonts/Play-Bold.eot');
+	src: local('☺'), url('../fonts/Play-Bold.woff') format('woff'), url('../fonts/Play-Bold.ttf') format('truetype'), url('../fonts/Play-Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+
